@@ -1,0 +1,23 @@
+package com.gpr.apps;
+
+public class reverseof2by2array {
+public static void main(String[] args) {
+	        if (args.length != 4) {
+	            System.out.println("Please enter 4 integer numbers");
+	            return;
+	        }
+
+	        int[][] array = new int[2][2];
+	        for (int i = 0; i < 4; i++) {
+	            array[i / 2][i % 2] = Integer.parseInt(args[i]);
+	        }
+
+	        // Reverse the array
+	        for (int i = 0; i < 2; i++) {
+	            for (int j = 0; j < 2; j++) {
+	                System.out.print(array[1 - i][1 - j] + " ");
+	            }
+	            System.out.println();
+	        }
+	    }
+	}
