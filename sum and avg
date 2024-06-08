@@ -1,0 +1,22 @@
+package com.gpr.apps;
+import java.util.*;
+public class sumandaverage {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int n;System.out.println("enter the array size:");
+	n=sc.nextInt();
+	float res=0;
+	float avg;
+	int a[]=new int[n];
+	for(int i=0;i<n;i++) {
+		System.out.println("enter the array element "+(i+1));
+		a[i]=sc.nextInt();
+	}
+	for(int i=0;i<n;i++) {
+		res=res+a[i];
+	}
+	System.out.println("the result is "+res);
+	avg=res/n;
+	System.out.println("the avg is "+avg);
+}
+}
