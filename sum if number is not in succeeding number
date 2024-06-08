@@ -1,0 +1,36 @@
+package com.gpr.apps;
+
+public class sumifnuminsuceedingorder {
+	    public static void main(String[] args) {
+//	        int[] array = {10, 3, 6, 1, 2, 7, 9}; // example 1
+	         int[] array = {7, 1, 2, 3, 6}; // example 2
+	        // int[] array = {1, 6, 4, 7, 9}; // example 3
+
+	        int sum = 0;
+	        int sixIndex = -1;
+	        int sevenIndex = -1;
+
+	        for (int i = 0; i < array.length; i++) {
+	            if (array[i] == 6) {
+	                sixIndex = i;
+	            } else if (array[i] == 7) {
+	                sevenIndex = i;
+	            }
+	        }
+
+	        if (sixIndex!= -1 && sevenIndex!= -1 && sixIndex < sevenIndex) {
+	            for (int i = 0; i < sixIndex; i++) {
+	                sum += array[i];
+	            }
+	            for (int i = sevenIndex + 1; i < array.length; i++) {
+	                sum += array[i];
+	            }
+	        } else {
+	            for (int i = 0; i < array.length; i++) {
+	                sum += array[i];
+	            }
+	        }
+
+	        System.out.println("Sum: " + sum);
+	    }
+}
